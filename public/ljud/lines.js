@@ -1,0 +1,25 @@
+/* Genererad av ljudify – text till färdig mp3-fil. */
+window.__ROST = {
+ "Enkla mönster i talföljder och enkla geometriska mönster samt hur de\n   konstrueras, beskrivs och uttrycks.": "7b98ed07d5",
+ "Ett mer varje gång.": "add3e95296",
+ "Nivå ett. Vad kommer sedan?": "079e54e605",
+ "Nivå två. Två steg i taget. Vad kommer sedan?": "44e7e77c3d",
+ "Nivå tre. Nu växlar formen också. Vad kommer sedan?": "4b8c043300",
+ "Nivå ett klar! Nu blir mönstren svårare.": "2379a1dbcd",
+ "Nivå två klar! Nu växlar formerna också.": "1fbfdf9ead",
+ "Alla mönster klara! Du hittade alla mönster. Visa stjärnorna hemma!": "9060769b7e",
+ "Vad kommer sedan?": "202a58a0e5",
+ "Titta noga på raden igen.": "d347e12cc5",
+ "Nivå": "3249cbf2fc",
+ "stjärnor. Nu blir mönstren svårare.": "4384e762ea",
+ "Nästa nivå": "2c837e4a82",
+ "Alla mönster klara!": "e7ad3766dd",
+ "Du hittade alla mönster och fick": "1895abc450",
+ "stjärnor. Visa dem hemma!": "151846fd50",
+ "Samma former om och om igen.": "6fe1e01059",
+ "Ett mindre varje gång.": "040e482875",
+ "Två mer varje gång.": "09b340615b",
+ "Två mindre varje gång.": "104c8f6491",
+ "Samma form, men ett mer varje gång.": "963a46f1d6",
+ "Formen växlar och ett mer varje gång.": "e8cfa4869b"
+};

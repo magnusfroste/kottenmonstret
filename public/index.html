@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kotten och mönstret – vad kommer sedan? (åk 1–3)</title>
+<meta name="description" content="En rad brickor följer ett mönster. Peka på brickan som kommer sedan: samma former om och om igen, ett mer varje gång eller ett mindre. Tränar mönster i talföljder och geometriska mönster, matematik åk 1–3. Gratis, ingen inloggning.">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="Kotten och mönstret">
+<meta property="og:description" content="Vad kommer sedan? Mönster i rader – matematik åk 1–3.">
+<meta property="og:image" content="og.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.skolappar.com/kotten.js" defer></script>
+</head>
+<body>
+
+<div id="startskarm">
+  <div class="sk-inner">
+    <img class="sk-ikon" src="icon-192.png" alt="" width="96" height="96">
+    <h1>Kotten och mönstret</h1>
+    <p class="sk-tagline">En rad brickor följer ett mönster. Peka på den som kommer sedan.</p>
+    <div class="sk-taggar">
+      <span>Matematik</span><span>Åk 1–3</span><span>Mönster</span>
+    </div>
+    <button class="sk-play" id="spela" aria-label="Spela Kotten och mönstret">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+      Spela
+    </button>
+    <p class="sk-fot">Gratis · ingen inloggning · skolappar.com</p>
+    <details class="sk-laroplan">
+      <summary>Läroplanskoppling (Lgr22)</summary>
+      <p><b>Matematik, åk 1–3, centralt innehåll:</b> ”Enkla mönster i talföljder och enkla geometriska mönster samt hur de konstrueras, beskrivs och uttrycks.”</p>
+      <p>Varje runda är en rad brickor som följer en regel. Nivå 1 är geometriska mönster som upprepas (triangel, cirkel, triangel …). Nivå 2 är talföljder där antalet ökar eller minskar lika mycket varje steg (ett mer, två mindre). Nivå 3 blandar: en växande rad med fast form, och en rad där både formbytet och antalet ändras samtidigt – då måste barnet hitta två regler i samma rad. Barnet pekar på en av tre brickor; fel svar kostar inget, Kotten funderar och ger en ny chans, och efter två försök pulserar rätt bricka. Regeln sägs och skrivs efter svaret, så barnet lär sig beskriva mönstret med ord – inte bara gissa nästa. Tio uppgifter per nivå, tre nivåer, en stjärna per uppgift som klarats utan hjälp. Källa: Skolverket, läroplanen för grundskolan (Lgr22).</p>
+    </details>
+  </div>
+</div>
+
+<main id="spel" hidden>
+  <header class="hud">
+    <div class="hud-vanster">
+      <span id="kotten" aria-hidden="true"></span>
+      <span class="prickar" id="prickar" aria-label="uppgifter klara"></span>
+    </div>
+    <div class="hud-hoger">
+      <span class="stjarnor" id="stjarnor" aria-label="stjärnor"></span>
+      <button class="ikon-knapp" id="hjalp" aria-label="Läs upp frågan igen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3l4-3v12l-4-3H4z"/><path d="M15 8a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <button class="ikon-knapp" id="ljud" aria-label="Ljud på eller av">
+        <svg viewBox="0 0 24 24" aria-hidden="true" id="ljudikon"></svg>
+      </button>
+    </div>
+  </header>
+
+  <p class="fraga" id="fraga" aria-live="polite">Vad kommer sedan?</p>
+
+  <section class="brada" aria-label="Mönstrets rad">
+    <div class="rad" id="rad"></div>
+  </section>
+
+  <section class="svar" id="svar" aria-label="Välj den bricka som kommer sedan"></section>
+</main>
+
+<div id="overlay" hidden>
+  <div class="ov-inner">
+    <div id="ov-bild"></div>
+    <h2 id="ov-titel"></h2>
+    <p id="ov-text"></p>
+    <div class="ov-knappar">
+      <button class="knapp stor" id="ov-nasta"></button>
+      <button class="knapp tyst" id="ov-om" hidden>Spela igen</button>
+    </div>
+  </div>
+</div>
+
+<script src="monster.js"></script>
+<script src="ljud/lines.js" defer></script>
+<script src="ljud/rosten.js" defer></script>
+<script src="app.js"></script>
+</body>
+</html>

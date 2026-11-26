@@ -1,0 +1,17 @@
+[
+  {
+    "rad": "6 kvadrat , 5 kvadrat , 4 kvadrat , 3 kvadrat , 2 kvadrat",
+    "svar": "1 kvadrat",
+    "regel": "Ett mindre varje gång."
+  },
+  {
+    "rad": "5 cirkel , 6 cirkel , 7 cirkel , 8 cirkel , 9 cirkel",
+    "svar": "10 cirkel",
+    "regel": "Ett mer varje gång."
+  },
+  {
+    "rad": "8 triangel , 7 triangel , 6 triangel , 5 triangel , 4 triangel",
+    "svar": "3 triangel",
+    "regel": "Ett mindre varje gång."
+  }
+]
