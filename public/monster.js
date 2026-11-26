@@ -143,9 +143,9 @@
   /* --- nivåerna -------------------------------------------------------- */
 
   var NIVAA = {
-    1: ["rep2", "rep2", "rep2", "rep3"],
-    2: ["ett_mer", "ett_mindre", "ett_mer", "tvaa_mer", "tvaa_mindre"],
-    3: ["rep3", "vaxer", "tvaa_mer", "tvaa_mindre", "vaxlar", "rep3"]
+    1: ["vaxer", "ett_mer", "vaxer", "rep2"],
+    2: ["ett_mer", "ett_mindre", "tvaa_mer", "tvaa_mindre"],
+    3: ["vaxlar", "tvaa_mer", "tvaa_mindre", "vaxer", "rep3", "vaxlar"]
   };
 
   function enUppgift(rng, sort) {
@@ -166,17 +166,12 @@
 
   /* antal uppgifter per nivå × nivåer = 30 stjärnor */
   function uppgifter(niva, antal, fro) {
-    var rng = mulberry32(fro || 1), sortlista = NIVAA[niva] || NIVAA[1], ut = [], i, forra = null, försök;
-    for (i = 0; i < antal; i++) {
-      försök = 0;
-      var u;
-      do {
-        u = enUppgift(rng, valj(rng, sortlista));
-        försök++;
-      } while (försök < 25 && forra && u.typ === forra.typ && u.regel === forra.regel && u.sekvens.every(function (b, k) { return lika(b, forra.sekvens[k]); }));
-      forra = u;
-      ut.push(u);
-    }
+    var rng = mulberry32(fro || 1), sortlista = NIVAA[niva] || NIVAA[1];
+    /* blanda en kö av sorterna så att varje nivå garanterat blandar dem,
+       i stället för att slumpen kan ge tio likadana uppgifter i rad */
+    var ko = [], ut = [], i;
+    while (ko.length < antal) ko = ko.concat(blanda(rng, sortlista.slice()));
+    for (i = 0; i < antal; i++) ut.push(enUppgift(rng, ko[i]));
     return ut;
   }
 

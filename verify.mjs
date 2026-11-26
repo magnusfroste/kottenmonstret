@@ -97,12 +97,14 @@ for (const niva of [1, 2, 3]) {
 // nivåerna ska skilja sig: nivå 1 bara repetition, nivå 3 aldrig bara rep2
 {
   const n1 = M.uppgifter(1, 10, 5).map((u) => u.typ);
-  if (!n1.every((t) => t.startsWith("rep"))) fel.push("nivå 1 innehåller annat än repetition");
+  if (!n1.some((t) => t === "vaxer" || t === "ett_mer")) fel.push("nivå 1 saknar räkneserie");
+  if (n1.filter((t) => t.startsWith("rep")).length > n1.length / 2) fel.push("nivå 1 är mest repetition");
   const n3 = M.uppgifter(3, 20, 5).map((u) => u.typ);
-  if (n3.every((t) => t === "rep2")) fel.push("nivå 3 är bara enkel repetition");
-  if (!n3.some((t) => t === "vaxer")) fel.push("nivå 3 saknar växande rad");
+  if (!n3.some((t) => t === "vaxlar")) fel.push("nivå 3 saknar växlande rad");
+  if (n3.filter((t) => t.startsWith("rep")).length > n3.length / 2) fel.push("nivå 3 är mest repetition");
   const n2 = M.uppgifter(2, 10, 5).map((u) => u.typ);
   if (n2.some((t) => t.startsWith("rep"))) fel.push("nivå 2 innehåller repetition");
+  if (n2.some((t) => t === "vaxer")) fel.push("nivå 2 är för lik nivå 1");
 }
 
 // kanonisk lista för kortbild och dokumentation

@@ -1,17 +1,17 @@
 [
   {
-    "rad": "6 kvadrat , 5 kvadrat , 4 kvadrat , 3 kvadrat , 2 kvadrat",
-    "svar": "1 kvadrat",
-    "regel": "Ett mindre varje gång."
+    "rad": "2 triangel , 4 triangel , 6 triangel , 8 triangel",
+    "svar": "10 triangel",
+    "regel": "Två mer varje gång."
   },
   {
-    "rad": "5 cirkel , 6 cirkel , 7 cirkel , 8 cirkel , 9 cirkel",
-    "svar": "10 cirkel",
+    "rad": "9 stjarna , 7 stjarna , 5 stjarna , 3 stjarna",
+    "svar": "1 stjarna",
+    "regel": "Två mindre varje gång."
+  },
+  {
+    "rad": "4 stjarna , 5 stjarna , 6 stjarna , 7 stjarna , 8 stjarna",
+    "svar": "9 stjarna",
     "regel": "Ett mer varje gång."
-  },
-  {
-    "rad": "8 triangel , 7 triangel , 6 triangel , 5 triangel , 4 triangel",
-    "svar": "3 triangel",
-    "regel": "Ett mindre varje gång."
   }
 ]
