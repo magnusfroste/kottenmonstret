@@ -75,14 +75,10 @@
     if (!ljudPa || !text) return;
     try {
       if (window.__rost) { var a = window.__rost(text); if (a) return; }
-      if ("speechSynthesis" in window) {
-        var u = new SpeechSynthesisUtterance(text);
-        u.lang = "sv-SE"; u.rate = 0.94; u.volume = 0.9;
-        window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
-      }
+      
     } catch (e) { }
   }
-  function tysta() { try { window.__rostStopp && window.__rostStopp(); } catch (e) { } try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { } }
+  function tysta() { try { window.__rostStopp && window.__rostStopp(); } catch (e) { } window.__rostStopp(); }
   function spar(namn, varde) { try { if (window.skolappar && window.skolappar.event) window.skolappar.event(namn, varde); } catch (e) { } }
 
   /* ------------------------------------------------------------------ *
